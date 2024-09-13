@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía de Los Órganos</title>
+    <link rel="shortcut icon" href="logo/logoo.jpeg">
+    <link rel="stylesheet" href="barra.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #fdfdfd;
+            margin-bottom: 20px;
+        }
+
+        .dish-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .dish {
+            width: 30%;
+            margin: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.05);
+        }
+
+        .dish:hover img {
+            transform: scale(1.1);
+        }
+
+        .dish h3 {
+            color: #1e3d59;
+            margin-bottom: 10px;
+        }
+
+        .dish p {
+            color: #37474f;
+            font-size: 1em;
+        }
+
+        footer {
+            background-color: #1e3d59;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pagination a {
+            background-color: #1e3d59;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #ffcc00;
+            color: #1e3d59;
+        }
+
+        .pagination .current-page {
+            background-color: #ffcc00;
+            color: #1e3d59;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Platos Típicos de Los Órganos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="atracciones.html">Atracciones</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="gastronomia.html">Gastronomía</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="dish-grid">
+            <!-- Plato 1 -->
+            <div class="dish">
+                <img src="gastronomia/ceviche.jpg" alt="Ceviche">
+                <h3>Ceviche</h3>
+                <p>El ceviche es el plato estrella de la costa peruana. Se prepara con pescado fresco, jugo de limón, cebolla, ají y cilantro, acompañado de choclo y camote.</p>
+            </div>
+
+            <!-- Plato 2 -->
+            <div class="dish">
+                <img src="gastronomia/tacu-tacu.jpg" alt="Tacu Tacu">
+                <h3>Tacu Tacu</h3>
+                <p>Un plato típico que combina arroz y frejoles cocidos, mezclados y fritos juntos, servido con carne, huevo frito o plátano frito.</p>
+            </div>
+
+            <!-- Plato 3 -->
+            <div class="dish">
+                <img src="gastronomia/jalea.jpg" alt="Jalea Mixta">
+                <h3>Jalea Mixta</h3>
+                <p>Un plato que mezcla mariscos y pescados fritos, acompañados de yuca, ensalada criolla y salsa tártara.</p>
+            </div>
+
+            <!-- Plato 4 -->
+            <div class="dish">
+                <img src="gastronomia/arroz.jpg" alt="Arroz con Mariscos">
+                <h3>Arroz con Mariscos</h3>
+                <p>Delicioso arroz sazonado con especias y cocinado con una variedad de mariscos, como calamares, conchas, camarones y pulpo.</p>
+            </div>
+
+            <!-- Plato 5 -->
+            <div class="dish">
+                <img src="gastronomia/chicharron.jpg" alt="Chicharrón de Pescado">
+                <h3>Chicharrón de Pescado</h3>
+                <p>Pescado fresco empanizado y frito, acompañado de papas fritas, yuca y ensalada de cebolla con limón.</p>
+            </div>
+
+            <!-- Plato 6 -->
+            <div class="dish">
+                <img src="gastronomia/majarisco.jpg" alt="Majarisco">
+                <h3>Majarisco</h3>
+                <p>Plato tradicional preparado con plátano verde triturado, acompañado de un guiso de mariscos que le da un sabor inigualable.</p>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="historia.html">1</a>
+        <a href="gastronomia.html" class="current-page">2</a>
+        <a href="eventos.html">3</a>
+    </div>
+
+    <footer>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+    </footer>
+</body>
+</html>

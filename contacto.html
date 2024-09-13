@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Los Órganos</title>
+    <link rel="shortcut icon" href="logo/logoo.jpeg">
+    <link rel="stylesheet" href="barra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        main {
+            padding: 20px;
+        }
+
+        .contact-container {
+            background: linear-gradient(to right, #ffffff, #e6f2ff);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 1000px;
+            border: 2px solid #1f4b99;
+        }
+
+        .contact-header {
+            text-align: center;
+            color: #1f4b99;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            flex: 1 1 300px;
+            text-align: center;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-item h3 {
+            color: #1f4b99;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: #666;
+        }
+
+        .contact-item i {
+            font-size: 40px;
+            color: #1f4b99;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-form iframe {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+
+        .contact-form h2 {
+            color: #1f4b99;
+            margin-bottom: 20px;
+        }
+
+        .contact-form button {
+            background-color: #1f4b99;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacto - Municipalidad de Los Órganos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="atracciones.html">Atracciones</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="contact-container">
+            <h2 class="contact-header">Contáctanos</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dirección</h3>
+                    <p>Av. Panamericana Norte S/N - Los Organos – Perú</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Teléfono</h3>
+                    <p>+51 966 854 085 (Serenazgo)</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correo Electrónico</h3>
+                    <p>mdlo@muniorganos.gob.pe</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Redes Sociales</h3>
+                    <p><a href="https://web.facebook.com/profile.php?id=100088900847132">Facebook</a> | <a href="https://www.instagram.com/municipalidadlosorganos/">Instagram</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Envíanos un Mensaje</h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIzvTCKh3iTCPQizyKRWIwlU00Y3PoR2_lIo6Kfld6EWLKXw/viewform?vc=0&c=0&w=1&flr=0" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                <div id="success-alert" class="alert alert-success mt-3" style="display: none;" role="alert">
+                    Mensaje enviado correctamente.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: <a href="mailto:turismo@muniorganos.gob.pe">turismo@muniorganos.gob.pe</a> | Serenazgo: +51 987 654 321</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            var iframe = document.createElement('iframe');
+            iframe.name = 'hidden_iframe';
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+        });
+    </script>
+</body>
+</html>
