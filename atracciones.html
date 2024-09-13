@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atracciones de Los Órganos</title>
+    <link rel="shortcut icon" href="logo/logoo.jpeg">
+    <link rel="stylesheet" href="barra.css">
+    
+    <style>
+       
+
+        
+
+        .attractions-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 1200px;
+        }
+
+        .attraction {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .attraction:hover {
+            transform: translateY(-10px);
+        }
+
+        .attraction img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .attraction img:hover {
+            opacity: 0.9;
+        }
+
+        .attraction h2 {
+            font-size: 24px;
+            color: #1f4b99;
+            margin: 15px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .attraction p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .attraction button {
+            background-color: #1f4b99;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .attraction button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+    
+
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .attractions-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .attraction {
+                width: 100%;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Atracciones Turísticas de Los Órganos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="organos.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="atracciones.html">Atracciones</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="attractions-container fade-in">
+            <div class="attraction">
+                <img src="atracciones/muelle.jpg" alt="Muelle Pesquero">
+                <h2>Muelle Pesquero</h2>
+                <p>El Muelle de Los Órganos es un atractivo turístico popular para disfrutar de las vistas al mar y observar la actividad pesquera local.</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="attraction">
+                <img src="atracciones/punta.jpg" alt="Playa Punta Veleros">
+                <h2>Playa Punta Veleros</h2>
+                <p>Una de las playas más hermosas de la región, perfecta para el surf, el kitesurf y relajarse bajo el sol.</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="attraction">
+                <img src="atracciones/tortuga.jpg" alt="Nado con Tortugas">
+                <h2>Nado con Tortugas</h2>
+                <p>Una experiencia única donde los visitantes pueden nadar con tortugas marinas en su hábitat natural.</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="attraction">
+                <img src="atracciones/ballenas.jpg" alt="Avistamiento de Ballenas">
+                <h2>Avistamiento de Ballenas</h2>
+                <p>De julio a octubre, es posible observar ballenas jorobadas migratorias que pasan por las costas de Los Órganos.</p>
+                <button>Ver más</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+    </footer>
+
+</body>
+</html>
