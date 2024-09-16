@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="logo/logoo.jpeg">
     <link rel="stylesheet" href="barra.css">
     <style>
+
         .pagination {
             margin-top: 40px;
             text-align: center;
@@ -26,21 +27,33 @@
         .pagination a:hover {
             background-color: #1e3d59;
             color: #ffffff;
-        }   
+        }
 
         /* Carrusel */
         .carousel {
+            width: 100%;
             max-width: 1000px;
+            height: 500px;
             margin: 50px auto;
             position: relative;
         }
 
         .carousel img {
             width: 100%;
-            height: 500px; /* Fija la altura de todas las imágenes */
-            object-fit: cover; /* Ajusta las imágenes dentro del contenedor sin distorsionarlas */
+            height: 500px;
+            object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.8s ease-in-out; /* Suave transición */
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+            position: static;
         }
 
         .carousel-indicators {
@@ -89,8 +102,6 @@
             background-color: rgba(0, 0, 0, 0.7);
         }
 
- 
-
         @media (max-width: 768px) {
             .carousel img {
                 border-radius: 5px;
@@ -101,7 +112,6 @@
                 padding: 8px;
             }
         }
-       
     </style>
 </head>
 <body>
@@ -123,19 +133,17 @@
     <!-- Carrusel de Fotos -->
     <div class="carousel">
         <div id="carouselImages">
-            <img src="carrusel/carrusel1.jpeg" alt="Imagen 1">
-            <img src="carrusel/carrusel2.jpeg" alt="Imagen 2" style="display:none;">
-            <img src="carrusel/carrusel3.jpg" alt="Imagen 3" style="display:none;">
-            <img src="carrusel/carrusel4.jpeg" alt="Imagen 4" style="display:none;">
-            <img src="carrusel/carrusel5.jpeg" alt="Imagen 5" style="display:none;">
-            <img src="carrusel/carrusel6.jpeg" alt="Imagen 6" style="display:none;">
-            <img src="carrusel/carrusel7.jpeg" alt="Imagen 7" style="display:none;">
-            <img src="carrusel/carrusel8.jpeg" alt="Imagen 8" style="display:none;">
-            <img src="carrusel/carrusel9.avif" alt="Imagen 9" style="display:none;">
-            <img src="carrusel/carrusel10.jpg" alt="Imagen 10" style="display:none;">
-            
+            <img src="carrusel/carrusel1.jpeg" alt="Imagen 1" class="active">
+            <img src="carrusel/carrusel2.jpeg" alt="Imagen 2">
+            <img src="carrusel/carrusel3.jpg" alt="Imagen 3">
+            <img src="carrusel/carrusel4.jpeg" alt="Imagen 4">
+            <img src="carrusel/carrusel5.jpeg" alt="Imagen 5">
+            <img src="carrusel/carrusel6.jpeg" alt="Imagen 6">
+            <img src="carrusel/carrusel7.jpeg" alt="Imagen 7">
+            <img src="carrusel/carrusel8.jpeg" alt="Imagen 8">
+            <img src="carrusel/carrusel9.avif" alt="Imagen 9">
+            <img src="carrusel/carrusel10.jpg" alt="Imagen 10">
         </div>
-        
 
         <!-- Indicadores -->
         <div class="carousel-indicators">
@@ -150,19 +158,21 @@
             <button onclick="showSlide(8)"></button>
             <button onclick="showSlide(9)"></button>
         </div>
-        <div class="pagination">
-            <a href="index.html">Página 1</a>
-            <a href="mapa.html">Página 2</a>
-            <a href="galeria.html">Página 3</a>
 
-        </div>
         <!-- Controles -->
         <div class="carousel-controls">
             <button onclick="prevSlide()">&#10094;</button>
             <button onclick="nextSlide()">&#10095;</button>
         </div>
     </div>
- 
+
+    <div class="pagination">
+        <a href="index.html">Página 1</a>
+        <a href="mapa.html">Página 2</a>
+        <a href="galeria.html">Página 3</a>
+    </div>
+<br>
+<br>
     <footer>
         <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
     </footer>
@@ -173,10 +183,10 @@
         const indicators = document.querySelectorAll('.carousel-indicators button');
 
         function showSlide(index) {
-            slides[currentSlide].style.display = 'none';
+            slides[currentSlide].classList.remove('active');
             indicators[currentSlide].classList.remove('active');
             currentSlide = index;
-            slides[currentSlide].style.display = 'block';
+            slides[currentSlide].classList.add('active');
             indicators[currentSlide].classList.add('active');
         }
 
@@ -193,3 +203,4 @@
 
 </body>
 </html>
+
