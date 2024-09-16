@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos - Los Órganos</title>
+    <link rel="shortcut icon" href="logo/logoo.jpeg">
+    <link rel="stylesheet" href="barra.css">
+    <style>
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pagination a {
+            color: #1e3d59;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin: 0 10px;
+            border: 2px solid #1e3d59;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #1e3d59;
+            color: #ffffff;
+        }   
+
+        /* Carrusel */
+        .carousel {
+            max-width: 1000px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 500px; /* Fija la altura de todas las imágenes */
+            object-fit: cover; /* Ajusta las imágenes dentro del contenedor sin distorsionarlas */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators button {
+            background-color: #1e3d59;
+            border: none;
+            padding: 8px;
+            margin: 0 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-indicators button.active {
+            background-color: #ffcc00;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            pointer-events: all;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+ 
+
+        @media (max-width: 768px) {
+            .carousel img {
+                border-radius: 5px;
+            }
+
+            .carousel-controls button {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galería de Fotos - Los Órganos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="atracciones.html">Atracciones</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrusel de Fotos -->
+    <div class="carousel">
+        <div id="carouselImages">
+            <img src="carrusel/carrusel1.jpeg" alt="Imagen 1">
+            <img src="carrusel/carrusel2.jpeg" alt="Imagen 2" style="display:none;">
+            <img src="carrusel/carrusel3.jpg" alt="Imagen 3" style="display:none;">
+            <img src="carrusel/carrusel4.jpeg" alt="Imagen 4" style="display:none;">
+            <img src="carrusel/carrusel5.jpeg" alt="Imagen 5" style="display:none;">
+            <img src="carrusel/carrusel6.jpeg" alt="Imagen 6" style="display:none;">
+            <img src="carrusel/carrusel7.jpeg" alt="Imagen 7" style="display:none;">
+            <img src="carrusel/carrusel8.jpeg" alt="Imagen 8" style="display:none;">
+            <img src="carrusel/carrusel9.avif" alt="Imagen 9" style="display:none;">
+            <img src="carrusel/carrusel10.jpg" alt="Imagen 10" style="display:none;">
+            
+        </div>
+        
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button class="active" onclick="showSlide(0)"></button>
+            <button onclick="showSlide(1)"></button>
+            <button onclick="showSlide(2)"></button>
+            <button onclick="showSlide(3)"></button>
+            <button onclick="showSlide(4)"></button>
+            <button onclick="showSlide(5)"></button>
+            <button onclick="showSlide(6)"></button>
+            <button onclick="showSlide(7)"></button>
+            <button onclick="showSlide(8)"></button>
+            <button onclick="showSlide(9)"></button>
+        </div>
+        <div class="pagination">
+            <a href="index.html">Página 1</a>
+            <a href="mapa.html">Página 2</a>
+            <a href="galeria.html">Página 3</a>
+
+        </div>
+        <!-- Controles -->
+        <div class="carousel-controls">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+ 
+    <footer>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#carouselImages img');
+        const indicators = document.querySelectorAll('.carousel-indicators button');
+
+        function showSlide(index) {
+            slides[currentSlide].style.display = 'none';
+            indicators[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].style.display = 'block';
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            let newIndex = currentSlide + 1 < slides.length ? currentSlide + 1 : 0;
+            showSlide(newIndex);
+        }
+
+        function prevSlide() {
+            let newIndex = currentSlide - 1 >= 0 ? currentSlide - 1 : slides.length - 1;
+            showSlide(newIndex);
+        }
+    </script>
+
+</body>
+</html>

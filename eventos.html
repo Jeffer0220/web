@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en Los Órganos</title>
+    <link rel="shortcut icon" href="logo/logoo.jpeg">
+    <link rel="stylesheet" href="barra.css">
+    <style>
+       
+
+        
+        .content {
+            padding: 30px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            color: #005a9c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .event-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .event-container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .event-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .event-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .event-details h2 {
+            color: #1e3d59;
+            font-size: 1.5em;
+        }
+
+        .event-details p {
+            color: #37474f;
+            font-size: 1em;
+        }
+
+        .event-details span {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #1e3d59;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pagination a {
+            background-color: #1e3d59;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #ffcc00;
+            color: #1e3d59;
+        }
+
+        .pagination .current-page {
+            background-color: #ffcc00;
+            color: #1e3d59;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eventos en Los Órganos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="atracciones.html">Atracciones</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="events-grid">
+            <div class="event-container">
+                <h1>Carnaval de Los Órganos</h1>
+                <img src="evento/carnaval.jpeg" alt="Carnaval en Los Órganos">
+                <div class="event-details">
+                    <h2>¡Una celebración llena de alegría y color!</h2>
+                    <p>El Carnaval de Los Órganos es una de las festividades más esperadas del año, con desfiles llenos de música, danzas tradicionales, y una explosión de colores.</p>
+                    <p><span>Inicio:</span> 10 de febrero</p>
+                    <p><span>Finalización:</span> 15 de febrero</p>
+                </div>
+            </div>
+
+            <div class="event-container">
+                <h1>Fiesta de San Pedro</h1>
+                <img src="evento/fiesta.jpeg" alt="Fiesta de San Pedro en Los Órganos">
+                <div class="event-details">
+                    <h2>Celebración del santo patrón de los pescadores</h2>
+                    <p>Una festividad religiosa que rinde homenaje a San Pedro, patrón de los pescadores. Se lleva a cabo una procesión marítima donde los pescadores locales decoran sus embarcaciones.</p>
+                    <p><span>Inicio:</span> 28 de junio</p>
+                    <p><span>Finalización:</span> 30 de junio</p>
+                </div>
+            </div>
+
+            <div class="event-container">
+                <h1>Semana Turística</h1>
+                <img src="evento/semana.jpeg" alt="Semana Turística en Los Órganos">
+                <div class="event-details">
+                    <h2>Promoción de la riqueza natural y cultural</h2>
+                    <p>Durante esta semana, se realizan diversas actividades turísticas para mostrar las maravillas del distrito. Hay concursos, visitas guiadas, y ferias gastronómicas.</p>
+                    <p><span>Inicio:</span> 20 de noviembre</p>
+                    <p><span>Finalización:</span> 26 de noviembre</p>
+                </div>
+            </div>
+
+            <!-- Eventos adicionales -->
+            <div class="event-container">
+                <h1>Festival del Mar</h1>
+                <img src="evento/festividad.jpg" alt="Festival del Mar en Los Órganos">
+                <div class="event-details">
+                    <h2>Una celebración de la vida marina y la cultura local</h2>
+                    <p>Un festival dedicado a la vida marina con actividades como exposiciones, concursos de pesca y degustaciones de mariscos frescos.</p>
+                    <p><span>Inicio:</span> 5 de agosto</p>
+                    <p><span>Finalización:</span> 10 de agosto</p>
+                </div>
+            </div>
+
+            <div class="event-container">
+                <h1>Festival Gastronómico</h1>
+                <img src="evento/gastronomica.avif" alt="Festival Gastronómico en Los Órganos">
+                <div class="event-details">
+                    <h2>Una muestra de la deliciosa gastronomía local</h2>
+                    <p>Un evento para disfrutar de los sabores únicos de Los Órganos con una variedad de platos típicos y bebidas tradicionales.</p>
+                    <p><span>Inicio:</span> 15 de septiembre</p>
+                    <p><span>Finalización:</span> 20 de septiembre</p>
+                </div>
+            </div>
+
+            <div class="event-container">
+                <h1>Concierto de Música Andina</h1>
+                <img src="evento/conicerto.jpeg" alt="Concierto de Música Andina en Los Órganos">
+                <div class="event-details">
+                    <h2>Celebración de la música y cultura andina</h2>
+                    <p>Un concierto que presenta lo mejor de la música andina con grupos locales y artistas invitados.</p>
+                    <p><span>Inicio:</span> 12 de octubre</p>
+                    <p><span>Finalización:</span> 14 de octubre</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="historia.html">1</a>
+        <a href="gastronomia.html">2</a>
+        <a href="eventos.html" class="current-page">3</a>
+    </div>
+
+    <footer>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+    </footer>
+</body>
+</html>
