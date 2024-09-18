@@ -5,10 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cómo Llegar a Los Órganos</title>
     <link rel="shortcut icon" href="logo/logoo.jpeg">
-    <link rel="stylesheet" href="barra.css">
+   
 
     <style>
-        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('atracciones/fondo.avif') no-repeat center center fixed;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #1e3d59;
+        }
+
+        header {
+            background-color: #1f4b99;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite que los elementos se adapten */
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffcc00;
+            color: #004080;
+            border-radius: 5px;
+        }
+
+        /* Estilos para la sección principal */
         main {
             flex: 1;
             padding: 40px;
@@ -27,33 +80,117 @@
 
         .map-container {
             margin: 40px auto;
-            max-width: 800px;
+            max-width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Mantiene proporción 16:9 */
+            position: relative;
         }
 
         .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 500px;
+            height: 100%;
             border: none;
         }
 
+        /* Pie de página */
+        footer {
+            background-color: #1e3d59;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ajuste de margen inferior al contenido principal */
+        main {
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        /* Estilos responsivos */
         @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
             main {
                 padding: 20px;
+            }
+
+            footer p {
+                font-size: 0.9em;
+            }
+
+            main h2 {
+                font-size: 2em;
             }
         }
 
         @media (max-width: 480px) {
+            body {
+                background-size: cover;
+                padding: 10px;
+            }
+
             header {
-                font-size: 1.5em;
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
 
             nav ul li {
-                display: block;
-                margin: 10px 0;
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            footer p {
+                font-size: 0.8em;
+            }
+
+            .map-container {
+                height: 0;
+                padding-bottom: 75%; /* Ajusta la altura del mapa para pantallas pequeñas */
             }
         }
-                /* Paginado */
-                .pagination {
+
+        /* Paginado */
+        .pagination {
             margin-top: 40px;
             text-align: center;
         }
@@ -100,19 +237,21 @@
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15818.138519862572!2d-80.564083!3d-4.210859!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5cbdbd79343ef%3A0xf55c5d470f4e3e0!2sLos%20%C3%93rganos%2C%20Talara%2C%20Piura%2C%20Per%C3%BA!5e0!3m2!1ses!2ses!4v1633696349387!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
         </div>
+
+        <!-- Paginado -->
         <div class="pagination">
             <a href="index.html">Página 1</a>
             <a href="mapa.html">Página 2</a>
             <a href="galeria.html">Página 3</a>
-
         </div>
     </main>
-   
 
     <!-- Pie de página -->
     <footer>
-        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: <a href="mailto:turismo@muniorganos.gob.pe">turismo@muniorganos.gob.pe</a></p>
+        <p>Teléfono: +51 966 854 085 (Serenazgo) | <a href="https://web.facebook.com/profile.php?id=100088900847132">Facebook</a> | <a href="https://www.instagram.com/municipalidadlosorganos/">Instagram</a></p>
     </footer>
 
 </body>
 </html>
+
