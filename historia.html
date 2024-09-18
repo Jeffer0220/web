@@ -5,11 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia de Los Órganos</title>
     <link rel="shortcut icon" href="logo/logoo.jpeg">
-    <link rel="stylesheet" href="barra.css">
 
     <style>
-    
-        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('atracciones/fondo.avif') no-repeat center center fixed;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #1e3d59;
+        }
+
+        header {
+            background-color: #1f4b99;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffcc00;
+            color: #004080;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #1e3d59;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
 
         .content {
             padding: 30px;
@@ -21,7 +99,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            flex-direction: column;
+            justify-content: space-around;
         }
 
         .content h1 {
@@ -37,20 +115,21 @@
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            width: 100%;
+            flex-wrap: wrap;
         }
 
         .history-section img,
         .legend img {
-            max-width: 50%;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border-radius: 10px;
-            margin-right: 20px;
         }
 
         .history-section .text,
         .legend .text {
-            max-width: 50%;
+            flex: 1;
+            padding: 20px;
         }
 
         .legend {
@@ -76,7 +155,6 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
-            display: inline-block;
         }
 
         .pagination a:hover {
@@ -89,21 +167,78 @@
             color: #1e3d59;
         }
 
-        footer {
-            background-color: #004080;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+        /* Estilos responsivos para tabletas */
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+            }
+
+            .history-section img,
+            .legend img {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .content h1 {
+                font-size: 2em;
+            }
+
+            footer p {
+                font-size: 0.9em;
+            }
         }
 
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
+        /* Estilos responsivos para celulares */
+        @media (max-width: 480px) {
+            body {
+                background-size: cover;
+                padding: 10px;
+            }
 
-        footer a:hover {
-            text-decoration: underline;
+            header {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            .history-section img,
+            .legend img {
+                width: 100%;
+                max-width: none;
+            }
+
+            .content h1 {
+                font-size: 1.8em;
+            }
+
+            footer p {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
@@ -127,35 +262,29 @@
             <img src="historia/historia.jpg" alt="Vista panorámica de Los Órganos">
             <div class="text">
                 <h2>Historia de Los Órganos</h2>
-                <p>El distrito de Los Órganos es uno de los seis que conforman la provincia de Talara ubicada en el departamento de Piura en el Norte del Perú.
-                    La historia de Los Órganos en sí, como pueblo, se remonta al descubrimiento de yacimientos petroleros durante el siglo xx. A partir de allí empezaron a llegar empresas y trabajadores a la zona, formando un pueblo bastante organizado al pie de la Panamericana, y a pocos metros del Océano Pacífico. Muchos de los trabajadores llegaron desde zonas rurales de Tumbes y de Zorritos, luego de la sierra de Piura y de zonas rurales alrededor de Sullana, conformando ambos grupos el grueso de la población organeña.
-                    Debido al crecimiento del pueblo tanto en población como en prosperidad hizo que fuera elevado a la categoría de distrito. Durante el primer gobierno del presidente Fernando Belaúnde Terry, un grupo de pobladores elaboraron los documentos respectivos con la finalidad de solicitar al Congreso de la República la elevación del pueblo de Los Órganos a la categoría de distrito, gracias al apoyo en aquel entonces por el senador Juan Taboada Zapata y del diputado Ricardo Temoche, representante por Piura en el Congreso.
-                    Mediante la sustentación de este proyecto se logró que el gobierno emita el 11 de diciembre de 1964 el D.L. Nº 15259 que le daba a este pueblo la ansiada categoría del distrito. Su reconocimiento oficial se llevó a cabo el día 10 de octubre del año 1965 en presencia del senador Taboada, formándose el Primer Concejo Municipal el 22 de noviembre de 1965.
-                    La nueva actividad floreciente en el distrito es el turismo, aprovechando las hermosas y exuberantes playas; de aguas celestes, turquesas; siempre soleadas, y cálidas prácticamente todo el año.</p>
+                <p>El distrito de Los Órganos es uno de los seis que conforman la provincia de Talara ubicada en el departamento de Piura en el Norte del Perú. La historia de Los Órganos en sí, como pueblo, se remonta al descubrimiento de yacimientos petroleros durante el siglo xx. A partir de allí empezaron a llegar empresas y trabajadores a la zona, formando un pueblo bastante organizado al pie de la Panamericana, y a pocos metros del Océano Pacífico. Muchos de los trabajadores llegaron desde zonas rurales de Tumbes y de Zorritos, luego de la sierra de Piura y de zonas rurales alrededor de Sullana, conformando ambos grupos el grueso de la población organeña. Debido al crecimiento del pueblo tanto en población como en prosperidad hizo que fuera elevado a la categoría de distrito. Durante el primer gobierno del presidente Fernando Belaúnde Terry, un grupo de pobladores elaboraron los documentos respectivos con la finalidad de solicitar al Congreso de la República la elevación del pueblo de Los Órganos a la categoría de distrito, gracias al apoyo en aquel entonces por el senador Juan Taboada Zapata y del diputado Ricardo Temoche, representante por Piura en el Congreso. Mediante la sustentación de este proyecto se logró que el gobierno emita el 11 de diciembre de 1964 el D.L. Nº 15259 que le daba a este pueblo la ansiada categoría del distrito. Su reconocimiento oficial se llevó a cabo el día 10 de octubre del año 1965 en presencia del senador Taboada, formándose el Primer Concejo Municipal el 22 de noviembre de 1965. La nueva actividad floreciente en el distrito es el turismo, aprovechando las hermosas y exuberantes playas; de aguas celestes, turquesas; siempre soleadas, y cálidas prácticamente todo el año.<br><br>...</p>
             </div>
         </div>
 
         <div class="legend">
             <div class="text">
                 <h2>La Leyenda del Cerro del Encanto</h2>
-                <p><strong>LA LEYENDA DEL CERRO DEL ENCANTO:</strong> Empiezo con decirte que el nombre de mi distrito, Los Órganos que pertenece a la provincia de Talara, departamento de Piura, proviene de los vientos que al chocar con los cerros, se producía el sonido del instrumento; también de la forma de la parte frontal que tiene este cerro, muy parecido al instrumento antiguo del órgano.
-                    Este cerro queda en la parte sur del pueblo, entre Los Órganos y la caleta El Ñuro (famoso por sus tortugas marinas).
-                    Cuenta la leyenda que este cerro tiene unas compuertas donde el que entra, nunca sale, que tiene escondido por dentro oro, y que en época de Semana Santa, se han perdido muchos pescadores. Algunos pobladores han visto una mujer vestida totalmente de blanco llamando e hipnotizando a las personas que se encontraban cerca. No se si todo esto sea verdad, pero lo que sí te puedo asegurar, es que cuando uno quiere ir hacia ese Cerro, cuando piensas que estas llegando, se aleja y se te hace mucho más largo el camino.
-                    Todos los que vienen al distrito de Los Órganos, preguntan por el famoso Cerro del Encanto... estás invitado.</p>
+                <p><strong>LA LEYENDA DEL CERRO DEL ENCANTO:</strong> LA LEYENDA DEL CERRO DEL ENCANTO: Empiezo con decirte que el nombre de mi distrito, Los Órganos que pertenece a la provincia de Talara, departamento de Piura, proviene de los vientos que al chocar con los cerros, se producía el sonido del instrumento; también de la forma de la parte frontal que tiene este cerro, muy parecido al instrumento antiguo del órgano. Este cerro queda en la parte sur del pueblo, entre Los Órganos y la caleta El Ñuro (famoso por sus tortugas marinas). Cuenta la leyenda que este cerro tiene unas compuertas donde el que entra, nunca sale, que tiene escondido por dentro oro, y que en época de Semana Santa, se han perdido muchos pescadores. Algunos pobladores han visto una mujer vestida totalmente de blanco llamando e hipnotizando a las personas que se encontraban cerca. No se si todo esto sea verdad, pero lo que sí te puedo asegurar, es que cuando uno quiere ir hacia ese Cerro, cuando piensas que estas llegando, se aleja y se te hace mucho más largo el camino. Todos los que vienen al distrito de Los Órganos, preguntan por el famoso Cerro del Encanto... estás invitado.</p>
             </div>
             <img src="historia/CERRO.jpg" alt="Texto y foto: Carla Guzmán.">
         </div>
+        <div class="pagination">
+            <a href="historia.html" class="current-page">1</a>
+            <a href="gastronomia.html">2</a>
+            <a href="eventos.html">3</a>
+        </div>
+    </div>
 
-        <!-- Paginado -->
-        
-    </div>
-    <div class="pagination">
-        <a href="historia.html" class="current-page">1</a>
-        <a href="gastronomia.html">2</a>
-        <a href="eventos.html">3</a>
-    </div>
+   
+
     <footer>
-        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: <a href="mailto:turismo@muniorganos.gob.pe">turismo@muniorganos.gob.pe</a></p>
+        <p>Teléfono: +51 966 854 085 (Serenazgo) | <a href="https://web.facebook.com/profile.php?id=100088900847132">Facebook</a> | <a href="https://www.instagram.com/municipalidadlosorganos/">Instagram</a></p>
     </footer>
 </body>
 </html>
