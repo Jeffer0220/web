@@ -6,9 +6,88 @@
     <title>Actividades de Los Órganos</title>
     <link rel="shortcut icon" href="logo/logoo.jpeg">
     <link rel="stylesheet" href="barra.css">
-    
     <style>
-        
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('atracciones/fondo.avif') no-repeat center center fixed;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten; /* Suaviza la imagen de fondo */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #1e3d59;
+        }
+
+        header {
+            background-color: #1f4b99;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffcc00;
+            color: #004080;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #1e3d59;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative; /* Cambié de fixed a relative */
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 100px; /* Añade un margen inferior para evitar que el pie de página tape contenido */
+        }
 
         .activities-container {
             display: flex;
@@ -88,20 +167,75 @@
         }
 
         @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
             .activities-container {
                 flex-direction: column;
                 align-items: center;
             }
 
             .activity {
+                width: 90%;
+                margin: 15px 0;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            footer p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-size: cover;
+                padding: 10px;
+            }
+
+            header {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .activity {
                 width: 100%;
                 margin: 15px 0;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            footer p {
+                font-size: 0.8em;
             }
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1 class="fade-in">Actividades Turísticas de Los Órganos</h1>
     </header>
@@ -149,7 +283,8 @@
     </main>
 
     <footer>
-        <p>Municipalidad Distrital de Los Órganos | Contacto: turismo@muniorganos.gob.pe | Serenazgo: +51 987 654 321</p>
+        <p>Municipalidad Distrital de Los Órganos | Contacto: <a href="mailto:turismo@muniorganos.gob.pe">turismo@muniorganos.gob.pe</a></p>
+        <p>Teléfono: +51 966 854 085 (Serenazgo) | <a href="https://web.facebook.com/profile.php?id=100088900847132">Facebook</a> | <a href="https://www.instagram.com/municipalidadlosorganos/">Instagram</a></p>
     </footer>
 
 </body>
